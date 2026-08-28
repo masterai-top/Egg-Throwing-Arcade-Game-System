@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/sitemap.xml
