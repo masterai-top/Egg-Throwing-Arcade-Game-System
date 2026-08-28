@@ -5,26 +5,180 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Guandan Egg Throwing Game Source Code</title>
   <meta name="description" content="掼蛋游戏源码，Guandan and Egg Throwing arcade card game source code with C++ rule engine, tournament system, rotating-table gameplay, operations plan and market research documents.">
+  <meta name="keywords" content="掼蛋源码, 掼蛋游戏源码, Guandan game source code, Egg Throwing card game, C++ card game server, 棋牌游戏源码, tournament system, multiplayer card game">
+  <link rel="canonical" href="https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/">
   <style>
-body{font-family:Arial,"Microsoft YaHei",sans-serif;margin:0;color:#17202a;background:#f7f8fb;line-height:1.65}
-header{background:#213047;color:white;padding:48px 20px}
-main{max-width:1080px;margin:0 auto;padding:30px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{background:white;border:1px solid #d8dee4;border-radius:8px;padding:18px}
-.tag{display:inline-block;background:#fff3d7;border:1px solid #e4ca85;border-radius:999px;padding:5px 9px;margin:3px}
-a{color:#0969da}footer{padding:24px 20px;text-align:center;color:#57606a;background:white;border-top:1px solid #d8dee4}
-</style>
+    body {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      margin: 0;
+      color: #17202a;
+      background: #f7f8fb;
+      line-height: 1.65;
+    }
+    header {
+      background: #213047;
+      color: white;
+      padding: 48px 20px;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px 46px;
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 36px 0 12px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 14px;
+    }
+    .lead {
+      max-width: 900px;
+      color: #eaf2ff;
+      font-size: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #d8dee4;
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .screenshot-card {
+      padding: 12px;
+    }
+    .screenshot-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #d8dee4;
+      background: #fff;
+    }
+    .tag {
+      display: inline-block;
+      background: #fff3d7;
+      border: 1px solid #e4ca85;
+      border-radius: 999px;
+      padding: 5px 9px;
+      margin: 3px;
+      color: #5c4209;
+    }
+    a {
+      color: #0969da;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #fff;
+      background: #0969da;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    footer {
+      padding: 24px 20px;
+      text-align: center;
+      color: #57606a;
+      background: white;
+      border-top: 1px solid #d8dee4;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>掼蛋游戏源码 | Guandan Egg Throwing Game Source Code</h1><p>掼蛋游戏源码、C++ 棋牌游戏服务器、比赛系统、团团转玩法、运营方案和产品策划资料。</p></header>
-  <main><section class="grid">
-<div class="card"><h2>Guandan Rules</h2><p>升级、进贡、还贡、抗贡、同伴配合、炸弹、顺子和组合牌型规则。</p></div>
-<div class="card"><h2>Tournament System</h2><p>SNG、定时赛、积分赛、排行榜、奖励配置和报名流程。</p></div>
-<div class="card"><h2>Rotating Table Mode</h2><p>团团转、多桌轮转、分组匹配、赛事节奏和运营活动设计。</p></div>
-<div class="card"><h2>C++ Game Server</h2><p>规则引擎、房间服务、结算逻辑、后台配置和数据库结构。</p></div>
-</section>
-<section><h2>SEO Keywords</h2><p><span class="tag">掼蛋源码</span><span class="tag">Guandan game source code</span><span class="tag">Egg Throwing card game</span><span class="tag">C++ card game server</span><span class="tag">tournament system</span><span class="tag">棋牌游戏源码</span></p></section>
-<p><a href="features.html">Features</a> | <a href="architecture.html">Architecture</a> | <a href="deployment.html">Deployment</a> | <a href="responsible-use.html">Responsible Use</a></p></main>
-  <footer>GitHub: <a href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">Egg-Throwing-Arcade-Game-System</a> | Telegram @xuzongbin001 | masterai918@gmail.com</footer>
+  <header>
+    <div class="wrap">
+      <h1>掼蛋游戏源码 | Guandan Egg Throwing Game Source Code</h1>
+      <p class="lead">面向商业化评估和二次开发的掼蛋游戏源码，覆盖 C++ 棋牌游戏服务器、规则引擎、比赛系统、团团转玩法、运营方案、市场调研和产品策划资料。</p>
+      <a class="button" href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">View GitHub Repository</a>
+      <a class="button" href="features.html">Features</a>
+      <a class="button" href="architecture.html">Architecture</a>
+      <a class="button" href="deployment.html">Deployment</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Core Modules</h2>
+      <div class="grid">
+        <div class="card"><h3>Guandan Rules</h3><p>升级、进贡、还贡、抗贡、同伴配合、炸弹、顺子和组合牌型规则。</p></div>
+        <div class="card"><h3>Tournament System</h3><p>SNG、定时赛、积分赛、排行榜、奖励配置和报名流程。</p></div>
+        <div class="card"><h3>Rotating Table Mode</h3><p>团团转、多桌轮转、分组匹配、赛事节奏和运营活动设计。</p></div>
+        <div class="card"><h3>C++ Game Server</h3><p>规则引擎、房间服务、结算逻辑、后台配置和数据库结构。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Product Screenshots</h2>
+      <p>Product screenshots are loaded from <code>docs/assets/Screenshots/</code>. Since this page is <code>docs/index.html</code>, the correct image path is <code>assets/Screenshots/filename.png</code>.</p>
+      <div class="grid">
+        <div class="card screenshot-card">
+          <h3>Guandan Game Lobby</h3>
+          <img src="assets/Screenshots/111.png" alt="Guandan Egg Throwing Arcade Game System Lobby Screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>Guandan Card Table</h3>
+          <img src="assets/Screenshots/222.png" alt="Guandan card game source code table gameplay screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>Tournament And Room System</h3>
+          <img src="assets/Screenshots/3333.png" alt="Guandan tournament room system source code screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>Operations And Activity Panel</h3>
+          <img src="assets/Screenshots/4444.png" alt="Egg Throwing arcade card game operations activity panel screenshot" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>SEO Keywords</h2>
+      <p>
+        <span class="tag">掼蛋源码</span>
+        <span class="tag">掼蛋游戏源码</span>
+        <span class="tag">Guandan game source code</span>
+        <span class="tag">Egg Throwing card game</span>
+        <span class="tag">C++ card game server</span>
+        <span class="tag">tournament system</span>
+        <span class="tag">棋牌游戏源码</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Documentation</h2>
+      <div class="grid">
+        <div class="card"><h3>Features</h3><p><a href="features.html">Rules, rooms, tournament system and operations modules</a></p></div>
+        <div class="card"><h3>Architecture</h3><p><a href="architecture.html">C++ game server, card rules, admin and data structure</a></p></div>
+        <div class="card"><h3>Deployment</h3><p><a href="deployment.html">GitHub Pages, private configuration and deployment checklist</a></p></div>
+        <div class="card"><h3>Responsible Use</h3><p><a href="responsible-use.html">Compliance, age rating and responsible game operations notes</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    GitHub: <a href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">Egg-Throwing-Arcade-Game-System</a>
+    | Telegram @xuzongbin001 | masterai918@gmail.com
+  </footer>
 </body>
 </html>
