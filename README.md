@@ -36,11 +36,11 @@
 | :---: | :---: | :---: |
 ，![loading_guandan_bg](https://github.com/user-attachments/assets/97e6f364-be19-4b49-88c4-feded9ea4c17)
 
-> 📷 截图正在整理中，联系我可获取演示视频和策划文档样例
+
 
 🎥 **演示视频**：[联系我获取在线演示](https://t.me/xuzongbin001)
 
-## 💰 获取源码
+## 💰 联系我
 
 ✅ 完整C++服务端源码  
 ✅ 完整客户端源码  
@@ -52,7 +52,7 @@
 📱 **Telegram：@xuzongbin001**  
 📧 **Email：masterai918@gmail.com**
 
-👉 **联系我获取演示站 + 详细报价**
+
 
 ---
 
