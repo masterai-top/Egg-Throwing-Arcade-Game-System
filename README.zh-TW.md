@@ -56,7 +56,24 @@ tests/                  # 規則、結算、接口與賽事流程測試
 - [架構說明](docs/architecture.html)
 - [部署指南](docs/deployment.html)
 - [合規使用](docs/responsible-use.html)
+## 📸 界面预览
 
+
+### 弹蛋街机游登录
+
+![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
+
+### 掼蛋游戏玩法界面
+
+![掼蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
+
+### 掼蛋街机活动与奖励
+
+![掼蛋活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
+
+### 掼蛋大厅
+
+![运营后台与数据面板 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
 ## 聯繫方式
 
 Telegram：`@xuzongbin001`  
