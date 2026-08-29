@@ -50,7 +50,7 @@ Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的
 
 ### 弹蛋街机游登录
 
-![掼蛋游戏登录 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
+![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
 
 ### 掼蛋游戏玩法界面
 
