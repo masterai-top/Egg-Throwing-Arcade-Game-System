@@ -48,7 +48,7 @@ Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的
 ## 📸 界面预览
 
 
-### 弹蛋街机游登录
+### 掼蛋游戏中
 
 ![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
 
@@ -62,7 +62,7 @@ Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的
 
 ### 掼蛋大厅
 
-![运营后台与数据面板 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
+![掼蛋大厅 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
 
 
 
