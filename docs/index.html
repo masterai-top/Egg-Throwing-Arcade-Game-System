@@ -1,185 +1,288 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta name="google-site-verification" content="rrp5Uvgzi-1-rMxUBfhV3wjlNrFqzwnqiA4e3qsOLEM" />
+  <meta name="google-site-verification" content="rrp5Uvgzi-1-rMxUBfhV3wjlNrFqzwnqiA4e3qsOLEM">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>掼蛋游戏源码，掼蛋源码</title>
-  <meta name="description" content="掼蛋游戏源码，支持 C++ 规则引擎、比赛系统、团团转玩法、运营后台和商业化部署.">
-  <meta name="keywords" content="掼蛋源码, Egg Throwing Game Source Code, Guandan Game Source Code, C++ card game server, arcade game source code">
+  <meta name="description" content="掼蛋弹蛋街机游戏源码，支持 C++ 规则引擎、比赛系统、团团转玩法、运营后台和商业化部署。">
+  <meta name="keywords" content="掼蛋源码, 弹蛋游戏源码, Egg Throwing Game Source Code, Guandan Game Source Code, C++ card game server, arcade game source code">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guandan Egg Throwing Game Source Code">
+  <meta property="og:description" content="掼蛋弹蛋街机游戏源码，支持 C++ 规则引擎、比赛系统、团团转玩法和运营后台。">
+  <meta property="og:url" content="https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/">
+  <meta property="og:image" content="https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/assets/Screenshots/111.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --primary: #b45309;
+      --primary-dark: #7c2d12;
+      --line: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, "Microsoft YaHei", sans-serif;
       margin: 0;
-      color: #17202a;
-      background: #f7f8fb;
-      line-height: 1.65;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
+
     header {
-      background: #213047;
-      color: white;
-      padding: 48px 20px;
-    }
-    main {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 30px 20px 46px;
-    }
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin: 0 0 14px;
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1.15;
-      letter-spacing: 0;
-    }
-    h2 {
-      margin: 36px 0 12px;
-      font-size: 28px;
-      letter-spacing: 0;
-    }
-    h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: 0;
-    }
-    p {
-      margin: 0 0 14px;
-    }
-    .lead {
-      max-width: 900px;
-      color: #eaf2ff;
-      font-size: 18px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: white;
-      border: 1px solid #d8dee4;
-      border-radius: 8px;
-      padding: 18px;
-    }
-    .screenshot-card {
-      padding: 12px;
-    }
-    .screenshot-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #d8dee4;
-      background: #fff;
-    }
-    .tag {
-      display: inline-block;
-      background: #fff3d7;
-      border: 1px solid #e4ca85;
-      border-radius: 999px;
-      padding: 5px 9px;
-      margin: 3px;
-      color: #5c4209;
-    }
-    a {
-      color: #0969da;
-    }
-    .button {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 14px;
-      border-radius: 8px;
+      padding: 64px 24px;
+      background: linear-gradient(135deg, #111827, #7c2d12);
       color: #fff;
-      background: #0969da;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-bottom: 28px;
+    }
+
+    nav a {
+      color: #fed7aa;
+      margin-right: 18px;
       text-decoration: none;
       font-weight: 700;
     }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 18px 0 14px;
+    }
+
+    header p {
+      max-width: 920px;
+      color: #ffedd5;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 38px 22px 72px;
+    }
+
+    h2 {
+      color: var(--primary-dark);
+      font-size: 30px;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: #0f172a;
+    }
+
+    p, li {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px;
+      margin: 20px 0;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, .08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: #ea580c;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: #111827;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, .10);
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #eef2f7;
+    }
+
+    .gallery figcaption {
+      padding: 13px 15px;
+      color: #475569;
+      font-size: 14px;
+      border-top: 1px solid #eef2f7;
+    }
+
     footer {
-      padding: 24px 20px;
+      padding: 30px;
       text-align: center;
-      color: #57606a;
-      background: white;
-      border-top: 1px solid #d8dee4;
+      color: var(--muted);
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Guandan Egg Throwing Game Source Code",
+        "alternateName": "掼蛋弹蛋游戏源码",
+        "description": "Guandan and Egg Throwing arcade game source code with C++ rule engine, tournament system, rotating table mode and admin backend.",
+        "codeRepository": "https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System",
+        "url": "https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/",
+        "programmingLanguage": ["C++", "JavaScript", "HTML"],
+        "runtimePlatform": "Game server and web client",
+        "applicationCategory": "GameApplication",
+        "author": {
+          "@type": "Organization",
+          "name": "MasterAI",
+          "url": "https://github.com/masterai-top"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "掼蛋弹蛋游戏源码",
+        "url": "https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/",
+        "description": "掼蛋弹蛋街机游戏源码，支持 C++ 规则引擎、比赛系统、团团转玩法、运营后台和商业化部署。",
+        "image": "https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/assets/Screenshots/111.png",
+        "inLanguage": "zh-CN"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="wrap">
+      <nav aria-label="主导航">
+        <a href="index.html">Egg Throwing Game</a>
+        <a href="features.html">Features</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="deployment.html">Deployment</a>
+        <a href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">GitHub</a>
+      </nav>
+
       <h1>掼蛋游戏源码，掼蛋源码</h1>
-      <p class="lead">面向商业化评估和二次开发的掼蛋游戏源码，覆盖 C++ 棋牌游戏服务器、规则引擎、比赛系统、团团转玩法、运营方案、市场调研和产品策划资料。</p>
-      <a class="button" href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">View GitHub Repository</a>
-      <a class="button" href="features.html">Features</a>
-      <a class="button" href="architecture.html">Architecture</a>
-      <a class="button" href="deployment.html">Deployment</a>
+      <p>
+        面向商业化评估和二次开发的掼蛋、弹蛋街机游戏源码，覆盖 C++ 棋牌游戏服务器、
+        规则引擎、比赛系统、团团转玩法、运营方案、产品截图和后台扩展。
+      </p>
+
+      <div class="actions">
+        <a class="button" href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">View GitHub Repository</a>
+        <a class="button secondary" href="features.html">Features</a>
+        <a class="button secondary" href="architecture.html">Architecture</a>
+        <a class="button secondary" href="deployment.html">Deployment</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section>
+    <section class="card">
       <h2>Core Modules</h2>
       <div class="grid">
-        <div class="card"><h3>Guandan Rules</h3><p>升级、进贡、还贡、抗贡、同伴配合、炸弹、顺子和组合牌型规则。</p></div>
-        <div class="card"><h3>Tournament System</h3><p>SNG、定时赛、积分赛、排行榜、奖励配置和报名流程。</p></div>
-        <div class="card"><h3>Rotating Table Mode</h3><p>团团转、多桌轮转、分组匹配、赛事节奏和运营活动设计。</p></div>
-        <div class="card"><h3>C++ Game Server</h3><p>规则引擎、房间服务、结算逻辑、后台配置和数据库结构。</p></div>
+        <div class="card">
+          <h3>Guandan Rules</h3>
+          <p>升级、进贡、还贡、抗贡、同伴配合、炸弹、顺子和组合牌型规则。</p>
+        </div>
+        <div class="card">
+          <h3>Tournament System</h3>
+          <p>SNG、定时赛、积分赛、排行榜、奖励配置和报名流程。</p>
+        </div>
+        <div class="card">
+          <h3>Rotating Table Mode</h3>
+          <p>团团转、多桌轮转、分组匹配、赛事节奏和运营活动设计。</p>
+        </div>
+        <div class="card">
+          <h3>C++ Game Server</h3>
+          <p>规则引擎、房间服务、结算逻辑、后台配置和数据库结构。</p>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section class="card" id="screenshots">
       <h2>Product Screenshots</h2>
-
-      <div class="grid">
-        <div class="card screenshot-card">
-          <h3>Guandan Game Lobby</h3>
-          <img src="assets/Screenshots/111.png" alt="Guandan Egg Throwing Arcade Game System Lobby Screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>Guandan Card Table</h3>
-          <img src="assets/Screenshots/222.png" alt="Guandan card game source code table gameplay screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>Tournament And Room System</h3>
-          <img src="assets/Screenshots/3333.png" alt="Guandan tournament room system source code screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>Operations And Activity Panel</h3>
-          <img src="assets/Screenshots/4444.png" alt="Egg Throwing arcade card game operations activity panel screenshot" loading="lazy">
-        </div>
+      <p>图片来自 <code>docs/assets/Screenshots/</code>。GitHub Pages 从 <code>/docs</code> 发布，所以页面中使用 <code>assets/Screenshots/图片名</code>。</p>
+      <div class="gallery">
+        <figure>
+          <img loading="lazy" src="assets/Screenshots/111.png" alt="弹蛋街机游戏大厅">
+          <figcaption>弹蛋街机游戏大厅</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/Screenshots/222.png" alt="弹蛋游戏玩法界面">
+          <figcaption>弹蛋游戏玩法界面</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/Screenshots/3333.png" alt="弹蛋街机活动与奖励">
+          <figcaption>弹蛋街机活动与奖励</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/Screenshots/4444.png" alt="运营后台与数据面板">
+          <figcaption>运营后台与数据面板</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section>
+    <section class="card">
       <h2>SEO Keywords</h2>
       <p>
-        <span class="tag">掼蛋源码</span>
-        <span class="tag">掼蛋游戏源码</span>
-        <span class="tag">Guandan game source code</span>
-        <span class="tag">Egg Throwing card game</span>
-        <span class="tag">C++ card game server</span>
-        <span class="tag">tournament system</span>
-        <span class="tag">棋牌游戏源码</span>
+        掼蛋源码、弹蛋游戏源码、Guandan Game Source Code、Egg Throwing Game Source Code、
+        C++ card game server、arcade game source code、比赛系统、团团转玩法、运营后台。
       </p>
-    </section>
-
-    <section>
-      <h2>Documentation</h2>
-      <div class="grid">
-        <div class="card"><h3>Features</h3><p><a href="features.html">Rules, rooms, tournament system and operations modules</a></p></div>
-        <div class="card"><h3>Architecture</h3><p><a href="architecture.html">C++ game server, card rules, admin and data structure</a></p></div>
-        <div class="card"><h3>Deployment</h3><p><a href="deployment.html">GitHub Pages, private configuration and deployment checklist</a></p></div>
-        <div class="card"><h3>Responsible Use</h3><p><a href="responsible-use.html">Compliance, age rating and responsible game operations notes</a></p></div>
-      </div>
     </section>
   </main>
 
   <footer>
-    GitHub: <a href="https://github.com/masterai-top/Egg-Throwing-Arcade-Game-System">Egg-Throwing-Arcade-Game-System</a>
-    | Telegram @xuzongbin001 | masterai918@gmail.com
+    MasterAI · <a href="https://github.com/masterai-top">GitHub Profile</a>
   </footer>
 </body>
 </html>
