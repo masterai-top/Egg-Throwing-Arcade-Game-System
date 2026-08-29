@@ -53,17 +53,17 @@ Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的
 
 ### 弹蛋街机游戏大厅
 
-![弹蛋街机游戏大厅 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
+![掼蛋游戏大厅 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
 
-### 弹蛋游戏玩法界面
+### 掼蛋游戏玩法界面
 
-![弹蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
+![掼蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
 
-### 弹蛋街机活动与奖励
+### 掼蛋街机活动与奖励
 
-![弹蛋街机活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
+![掼蛋活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
 
-### 运营后台与数据面板
+### 掼蛋运营后台与数据面板
 
 ![运营后台与数据面板 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
 
