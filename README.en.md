@@ -56,7 +56,24 @@ The public repository should show product structure, selected source examples, s
 - [Architecture](docs/architecture.html)
 - [Deployment](docs/deployment.html)
 - [Responsible Use](docs/responsible-use.html)
+## 📸 界面预览
 
+
+### 掼蛋游戏中
+
+![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
+
+### 掼蛋游戏玩法界面
+
+![掼蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
+
+### 掼蛋街机活动与奖励
+
+![掼蛋活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
+
+### 掼蛋大厅
+
+![掼蛋大厅 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
 ## Contact
 
 Telegram: `@xuzongbin001`  
