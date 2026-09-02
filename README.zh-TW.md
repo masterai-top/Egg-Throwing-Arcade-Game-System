@@ -1,10 +1,12 @@
-# 摜蛋遊戲源碼 | Egg Throwing Arcade Game System
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
 
-[簡體中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+# 摜蛋紙牌規則、賽事與伺服器專案
 
 Egg Throwing Arcade Game System 是一套面向商業化評估與二次開發的摜蛋遊戲源碼與營運策劃資料項目，覆蓋摜蛋核心規則、組隊對戰、升級機制、團團轉玩法、比賽系統、營運方案、市場調研、產品策劃設計與 C++ 遊戲服務端實現方向。
 
+
 ## 核心定位
+
 
 - 摜蛋遊戲源碼 / Guandan game source code
 - Throwing Eggs card game source code
@@ -13,7 +15,9 @@ Egg Throwing Arcade Game System 是一套面向商業化評估與二次開發的
 - 營運多年項目沉澱的策劃、市場調研與產品設計資料
 - 適合商業評估、私有化部署與二次開發
 
+
 ## 核心功能
+
 
 - 摜蛋規則：升級、進貢、還貢、抗貢、同伴配合、炸彈、順子、三帶二等
 - 對戰系統：好友房、金幣房、比賽房、私人局、團隊對戰與戰績統計
@@ -22,7 +26,9 @@ Egg Throwing Arcade Game System 是一套面向商業化評估與二次開發的
 - 營運資料：市場調研、營運方案、活動策劃、留存策略與商業化設計
 - 技術方向：C++ 規則引擎、房間服務、結算邏輯、後台配置與數據庫結構
 
+
 ## 項目結構建議
+
 
 ```text
 client/                 # 客戶端源碼或演示工程
@@ -37,7 +43,9 @@ tests/                  # 規則、結算、接口與賽事流程測試
 .github/workflows/      # CI 與 GitHub Pages 工作流
 ```
 
+
 ## 適用場景
+
 
 - 摜蛋遊戲、棋牌遊戲、地方特色紙牌遊戲源碼評估
 - 摜蛋比賽系統、好友房、金幣房、團團轉與營運活動開發
@@ -45,11 +53,15 @@ tests/                  # 規則、結算、接口與賽事流程測試
 - 面向國內棋牌、休閒競技與地方牌類市場的產品驗證
 - 遊戲公司、棋牌平台與源碼採購方的技術與營運資料參考
 
+
 ## 公開倉庫安全建議
+
 
 公開倉庫適合展示產品結構、部分源碼、截圖、市場調研摘要與技術文檔。不要公開真實用戶數據、支付密鑰、後台帳號、生產數據庫、私有營運數據、風控參數、真實訂單或未授權素材。
 
+
 ## 文檔
+
 
 - [項目主頁](docs/index.html)
 - [功能介紹](docs/features.html)
@@ -58,24 +70,34 @@ tests/                  # 規則、結算、接口與賽事流程測試
 - [合規使用](docs/responsible-use.html)
 ### 掼蛋游戏中
 
+
 ![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
+
 
 ### 掼蛋游戏玩法界面
 
+
 ![掼蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
+
 
 ### 掼蛋街机活动与奖励
 
+
 ![掼蛋活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
 
+
 ### 掼蛋大厅
+
 
 ![掼蛋大厅 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
 ## 聯繫方式
 
+
 Telegram：`@xuzongbin001`  
 Email：`masterai918@gmail.com`
 
+
 ## License
+
 
 僅限技術評估、商務溝通與授權合作，具體以倉庫 License 文件為準。
