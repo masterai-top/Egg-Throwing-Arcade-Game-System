@@ -1,5 +1,10 @@
-# 掼蛋游戏源码 | Egg Throwing Arcade Game System
+# 掼蛋游戏源码 |掼蛋规则与赛事模板 | Egg Throwing Arcade Game System
 [简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+
+
+本项目聚焦掼蛋规则与赛事模板，保留线上现有 README 的功能、架构、截图与使用说明，并以仓库实际代码为准。
+
+> 项目功能、性能、运营记录与部署能力应结合当前版本独立验证；许可证和第三方素材范围以仓库文件为准。
 
 
 Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的掼蛋游戏源码与运营策划资料项目，覆盖掼蛋核心规则、组队对战、升级机制、团团转玩法、比赛系统、运营方案、市场调研、产品策划设计和 C++ 游戏服务端实现方向。
