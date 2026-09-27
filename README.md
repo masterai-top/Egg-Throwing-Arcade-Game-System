@@ -1,115 +1,53 @@
 [简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md)
 
-# 掼蛋游戏源码 |掼蛋规则与赛事模板 | Egg Throwing Arcade Game System
+# 掼蛋游戏源码：C++ / Cocos2d-x 客户端与联网大厅模块
 
-Egg Throwing Arcade Game System 是一套面向商业化评估和二次开发的掼蛋游戏源码与运营策划资料项目，覆盖掼蛋核心规则、组队对战、升级机制、团团转玩法、比赛系统、运营方案、市场调研、产品策划设计和 C++ 游戏服务端实现方向。
+面向 **掼蛋源码、掼蛋游戏源码、掼蛋棋牌客户端、Guandan game source code** 检索的项目说明。仓库公开内容包含 C++/Cocos2d-x 客户端启动与生命周期、断线重连、用户资料、头像道具、兑换数据、特效及部分通信数据结构；产品截图展示大厅、四人牌桌和结算体验。
 
+> 重要边界：这是可核验的客户端代码片段与产品资料，不等同于开箱即用的完整服务端、规则引擎或运营后台。上线前需补齐依赖、服务端、资源授权、安全与合规审查。
 
-[![Contact](https://img.shields.io/badge/联系-TG%3A%40xuzongbin001-blue)](https://t.me/xuzongbin001)
-[![Platform](https://img.shields.io/badge/平台-iOS%20%7C%20Android%20%7C%20PC-green)]()
-[![Language](https://img.shields.io/badge/服务端-C%2B%2B-red)]()
+## 产品体验
 
+| 模块 | 产品表现 | 仓库线索 |
+|---|---|---|
+| 游戏大厅 | 初级/中级/高级场、快速开始、帮助入口 | `AppDelegate.*`、客户端状态数据 |
+| 四人牌桌 | 2 对 2 座位、手牌区、出牌/不出、局内提示 | `ClientData.*`、消息结构及截图 |
+| 断线恢复 | 网络中断提示、重新连接游戏房间 | `BreakLineReconnectionHint.*` |
+| 用户与头像 | 切换账号、购买/使用头像、资料状态 | `ChangeAccountPopupLayer.*`、`BuyHeadImage.*` |
+| 视觉反馈 | 震动、涟漪和界面效果 | `CCShake.*`、`CCRippleSprite.*`、`Effects.*` |
+| 基础工具 | Base64、MD5、兑换数据与银行消息结构 | `DataBase64.*`、`DataMd5.*`、`ExchangeDataManager.*` |
 
----
+## 掼蛋玩法概览
 
+掼蛋通常由四名玩家组成两队，对家为队友，使用两副扑克牌。玩家按牌型和点数轮流出牌，以一方两名成员的出牌名次决定升级结果。常见牌型包括单张、对子、三张、三带二、顺子、连对、钢板和炸弹；级牌、逢人配及具体升级规则应按采用的赛事规则配置和测试。
 
-## ✨ 核心特色
+典型流程：**进入大厅 → 选择房间 → 匹配/入座 → 发牌 → 轮流出牌 → 一局结算 → 升级或开始下一局**。
 
+## 产品截图
 
-| 特色模块 | 说明 |
-| :--- | :--- |
-| 🎮 **完整游戏源码** | C++服务端，掼蛋核心逻辑、出牌规则、牌型判断 |
-| 📊 **市场调研分析** | 掼蛋游戏市场调研报告，用户画像分析 |
-| 🚀 **运营方案** | 仓库所述的运营方案（历史与效果需独立核验），用户增长策略 |
-| 📝 **策划设计文案** | 完整产品策划文档，功能设计说明 |
-| 🎯 **团团转设计** | 独特的团团转玩法设计文档 |
-| 🏆 **比赛系统策划** | 掼蛋比赛、限时比赛的详细策划方案 |
+| 大厅与桌面 | 对局与结果 |
+|---|---|
+| ![丹阳掼蛋游戏大厅与房间入口](docs/assets/images/guandan-lobby.png) | ![掼蛋四人牌桌与手牌界面](docs/assets/images/guandan-table.png) |
+| ![掼蛋产品品牌画面](docs/assets/images/guandan-brand.png) | ![掼蛋对局结算与排名界面](docs/assets/images/guandan-result.png) |
 
+## 技术结构
 
-## 适用场景
+- **语言与客户端：** C++、Objective-C++、Cocos2d-x 风格 API。
+- **应用生命周期：** 场景启动、进入后台、恢复前台与网络关闭处理。
+- **UI 层：** 弹窗、标签、按钮、头像选择与视觉动作。
+- **网络衔接：** 重连参数、游戏服务器地址/端口和消息数据结构。
+- **数据与工具：** 客户端状态、兑换数据、Base64、MD5。
 
+## 二次开发建议
 
-- 掼蛋游戏、棋牌游戏、地方特色纸牌游戏源码评估
-- 掼蛋比赛系统、好友房、金币房、团团转和运营活动开发
-- C++ 棋牌游戏服务端、规则引擎和后台管理系统二次开发
-- 面向国内棋牌、休闲竞技和地方牌类市场的产品验证
-- 游戏公司、棋牌平台和源码采购方的技术与运营资料参考
+1. 先补齐缺失的引擎、UI 框架、场景、网络帮助类和美术资源。
+2. 将公开客户端与经过测试的掼蛋规则服务、房间服务、匹配及结算服务对接。
+3. 为牌型比较、逢人配、升级和异常重连建立自动化测试。
+4. 移除示例中的生产地址、密钥、真实用户与支付信息，完成素材授权和当地法规审核。
 
+## 在线图文文档
 
-## 公开仓库安全建议
+- [简体中文](https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/zh-cn/)
+- [繁體中文](https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/zh-tw/)
+- [English](https://masterai-top.github.io/Egg-Throwing-Arcade-Game-System/en/)
 
-
-公开仓库适合展示产品结构、部分源码、截图、市场调研摘要和技术文档。不要公开真实用户数据、支付密钥、后台账号、生产数据库、私有运营数据、风控参数、真实订单或未授权素材。
-
-
-## 文档
-
-
-- [项目主页](docs/index.html)
-- [功能介绍](docs/features.html)
-- [架构说明](docs/architecture.html)
-- [部署指南](docs/deployment.html)
-- [合规使用](docs/responsible-use.html)
-
-
-## 📸 界面预览
-
-
-### 掼蛋游戏中
-
-
-![掼蛋游戏 / Egg Throwing Arcade Game Lobby](docs/assets/Screenshots/111.png)
-
-
-### 掼蛋游戏玩法界面
-
-
-![掼蛋游戏玩法界面 / Egg Throwing Gameplay Screen](docs/assets/Screenshots/222.png)
-
-
-### 掼蛋街机活动与奖励
-
-
-![掼蛋活动与奖励 / Arcade Events and Rewards](docs/assets/Screenshots/3333.png)
-
-
-### 掼蛋大厅
-
-
-![掼蛋大厅 / Admin Dashboard and Analytics](docs/assets/Screenshots/4444.png)
-
-
-## 💰 联系我
-
-
-✅ 完整C++服务端源码  
-✅ 完整客户端源码  
-✅ 市场调研分析报告  
-✅ 运营方案文档  
-✅ 策划设计文案  
-✅ 比赛系统策划文档  
-
-
-📱 **Telegram：@xuzongbin001**  
-📧 **Email：masterai918@gmail.com**
-
-
-## 项目结构建议
-
-
-```text
-client/                 # 客户端源码或演示工程
-server/                 # C++ 游戏服务、房间服务、规则和结算逻辑
-admin/                  # 运营后台、活动配置、比赛配置和数据统计
-database/               # 数据库结构与迁移说明
-planning/               # 市场调研、运营方案、产品策划和活动文档
-config.example/         # 脱敏配置示例
-docs/                   # GitHub Pages 产品与技术文档
-scripts/                # 构建、部署和维护脚本
-tests/                  # 规则、结算、接口和赛事流程测试
-.github/workflows/      # CI 与 GitHub Pages 工作流
-```
----
-
-
-⭐ Star 这个仓库，支持优质掼蛋源码持续分享！
